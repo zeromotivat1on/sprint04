@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.center {
+    padding: 0 20px;
+}
+
+.slide {
+    display: none;
+    width: 400px;
+    height: 400px;
+}
+
+.box {
+    display: flex;
+    width: 40px;
+    height: 400px;
+}
+
+.button {
+    color: white;
+    background: lightgray;
+    border: 0;
+    width: 30px;
+}

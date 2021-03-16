@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    background: lightgray;
+    padding: 10px;
+}
+
+.left, .left div { 
+    padding: 10px; 
+    text-align: center; 
+    flex-direction: column;
+}
+
+.left, .right, .actors, .poster { display: flex; }
+
+.info { padding: 0 10px; }
+
+.actors span { 
+    padding: 10px;
+    margin-right: 10px;
+    background: teal;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.poster img {
+    width: 200px;
+    height: 400px;
+}

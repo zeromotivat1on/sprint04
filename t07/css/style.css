@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#main, #temp, #location {
+    margin: 10px;
+}
+.weather {
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+}
+
+.weather div {
+    font: 16px Arial;
+}

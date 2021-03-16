@@ -1,0 +1,35 @@
+table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+td {
+    padding: 20px;
+    background-color: lightgray;
+}
+
+tbody {
+    border: 4px solid black;
+    background-color: white;
+}
+
+.first_row {
+    background-color: red;
+}
+
+#placeholder {
+    float: left;
+}
+
+#notification {
+    float: right;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: -10px;
+}
