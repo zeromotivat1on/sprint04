@@ -1,0 +1,54 @@
+.main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+.buttons button {
+    background: #449DF2;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input, .output {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    background: #F0F0F0;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.text textarea {
+    resize: vertical;
+}
+
+.word, .text {
+    width: calc(100% - 26px);
+    padding: 0px 10px;
+}
+
+.word_input, .text_input {
+    width: 100%;
+}
+
+.output_div {
+    width: calc(100% - 30px);
+    padding: 0px 5px;
+    margin: 0 10px 20px 10px;
+    background: white;
+}

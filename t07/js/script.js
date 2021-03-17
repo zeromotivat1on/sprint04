@@ -6,17 +6,30 @@ function getWeather( lat, lon, exclude ) {
         console.log(data);
         drawWeather(data);
     })
-  }
+}
 
-    //getWeather("33.441792", "-94.037689", "minutely"); // Chicago
-    //getWeather("40.445", "-95.234978", "minutely" ); // London
-    getWeather("50.0", "36.25", "minutely"); // Kharkiv
+getWeather("50.0", "36.25", "minutely"); // Kharkiv
 
 function drawWeather(d) {
-	var celcius = Math.round(parseFloat(d.daily[0].temp.day)-273.15);
-	
-	document.getElementById('main').innerHTML += `<span class="get_main">${d.daily[0].weather[0].main}</span>`;
-	document.getElementById('temp').innerHTML += `<span class="get_temp">${celcius}&deg;</span>`;
-	document.getElementById('timezone').innerHTML += `<span class="get_location">${d.timezone}</span>`;
-    document.getElementById('city').innerHTML += `Kharkiv`;
+    for(let i = 0; i < 3; i++) {
+        let celcius = Math.round(parseFloat(d.daily[i].temp.day)-273.15);
+        let date = new Date(d.daily[i].dt * 1000).toUTCString();
+        let month = date.split(" ")[1];
+        let day = date.split(" ")[2];
+
+        document.querySelector(".day" + (i + 1) + " .date").innerHTML = day + " " + month;
+
+        if(celcius > 0) {
+            document.querySelector(".day" + (i + 1) + " .temperature").innerHTML = "+" + celcius + "°";
+        }
+        else {
+            document.querySelector(".day" + (i + 1) + " .temperature").innerHTML = celcius + "°";
+        }
+
+        if(d.daily[i].snow > 5) {
+            document.querySelector(".day" + (i + 1) + " .image").setAttribute("src", "assets/images/snow.jpeg");
+        } else {
+            document.querySelector(".day" + (i + 1) + " .image").setAttribute("src", "assets/images/sun.jpeg");
+        }
+    }
 }

@@ -4,13 +4,9 @@
     transform: rotate(45deg);
 }
 
-.figure:active > .active {
-    border: 1px dashed black;
-}
-
-#red { background: red; }
-#orange { background: orange; }
-#yellow { background: yellow; }
-#green { background: green; }
-#blue { background: blue; }
-#violet { background: violet; }
+.red { background: red; border: 2px dashed black;}
+.orange { background: orange; border: 2px dashed black;}
+.yellow { background: yellow; border: 2px dashed black;}
+.green { background: green; border: 2px dashed black;}
+.blue { background: blue; border: 2px dashed black;}
+.violet { background: violet; border: 2px dashed black;}

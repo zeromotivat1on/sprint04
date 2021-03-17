@@ -1,21 +1,24 @@
-var slideIndex = 0, wasPressed = false;
-showDivs(slideIndex);
+var slideIndex = -1, 
+    timer = setTimeout(showPic , 3000, 1);
 
-function plusDivs(n) {
-    showDivs(slideIndex += n, true);
-}
+function showPic(n) {
+    var slides = document.getElementsByClassName("slide");
 
-function showDivs(n, wasPressed) {
-    var i;
-    var x = document.getElementsByClassName("slide");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
+    if(n == 1) {
+        console.log(n);
+        if (slideIndex >= slides.length - 1) { slideIndex = 0; }
+        else { slideIndex += n }
+    } else if(n == -1) {
+        console.log(n);
+        if (slideIndex <= 0 || slideIndex == -1) { slideIndex = slides.length - 1; }
+        else { slideIndex += n }
     }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex - 1].style.display = "block";
-    if(!wasPressed) var timer = setTimeout(showDivs, 3000);
-    else clearTimeout(timer);
+    
+    console.log(slideIndex);
+    
+    for(let i = 0; i < slides.length; ++i) { slides[i].style.display = "none" };
+    slides[slideIndex].style.display = "block";
+    
+    clearTimeout(timer);
+    timer = setTimeout(showPic , 3000, 1);
 }

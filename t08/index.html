@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>RegExp and Cookies</title>
+    <meta name="description" content="t08. RegExp and Cookies">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <h1>RegExp and Cookies</h1>
+    <div class="main">
+        <div class="buttons">
+            <button onclick="toPhoneNumber()">To phone number [<span id="phone_number">0</span>]</button>
+            <button onclick="wordCount()">Word count [<span id="word_count">0</span>]</button>
+            <button onclick="wordReplace()">Word replace [<span id="word_replace">0</span>]</button>
+        </div>
+
+        <div class="input">
+            <div class="word">
+                <p>Word input:</p>
+                <input class="word_input" id="word_input" type="text">
+            </div>
+
+            <div class="text">
+                <p>Text input:</p>
+                <textarea class="text_input" id="text_input" rows="10" type="text"></textarea>
+            </div>
+            
+            <br>
+        </div>
+
+        <div class="output">
+            <p class="word">Output:</p>
+
+            <div class="output_div">
+                <span class="output_text" id="output_text">Cringe</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

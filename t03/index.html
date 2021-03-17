@@ -15,7 +15,7 @@
         <h1>Slideshow</h1>
         <div class="main">
             <div class="left box">
-                <button class="button black display-left" onclick="minusDivs(-1)">&#10094;</button>
+                <button class="button black display-left" id="left_button" onclick="showPic(-1)">&#10094;</button>
             </div>
             <div class="center">
                 <img class="slide" src="https://upload.wikimedia.org/wikipedia/ru/4/4d/Wojak.png">
@@ -24,7 +24,7 @@
 
             </div>
             <div class="right box">
-                <button class="button black display-right" onclick="plusDivs(1)">&#10095;</button>
+                <button class="button black display-right" id="right_button" onclick="showPic(1)">&#10095;</button>
             </div>
         </div>
         <script src="js/script.js"></script>

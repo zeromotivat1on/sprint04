@@ -1,8 +1,7 @@
 let elementsArr = document.querySelectorAll("#characters > li");
 
 for(let i = 0; i < elementsArr.length; ++i) {
-    if(!elementsArr[i].className /*|| elementsArr[i].className != "good" ||
-        elementsArr[i].className != "evil" || elementsArr[i].className != "unknown"*/) {
+    if(!elementsArr[i].className) {
         elementsArr[i] = elementsArr[i].className = "unknown";
     }
 
