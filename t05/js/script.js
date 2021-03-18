@@ -55,6 +55,7 @@ function move(i, e) {
 
         let fX = event.clientX;
         let fY = event.clientY;
+        
         if(Math.sqrt((startX - fX) * (startX - fX) + (startY - fY) * (startY - fY)) < 10) {
             arr[i].style.border = "2px dashed black";
             arr[i].setAttribute("class", `${temp[0]} ${temp[1]} not_active` + i);

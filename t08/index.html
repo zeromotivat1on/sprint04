@@ -10,13 +10,13 @@
     <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body onload="showCookie()" onclick="showCookie()">
     <h1>RegExp and Cookies</h1>
     <div class="main">
         <div class="buttons">
-            <button onclick="toPhoneNumber()">To phone number [<span id="phone_number">0</span>]</button>
-            <button onclick="wordCount()">Word count [<span id="word_count">0</span>]</button>
-            <button onclick="wordReplace()">Word replace [<span id="word_replace">0</span>]</button>
+            <button onclick="toPhoneNumber()">To phone number [<span class="button_num" id="phone_number">0</span>]</button>
+            <button onclick="wordCount()">Word count [<span class="button_num" id="word_count">0</span>]</button>
+            <button onclick="wordReplace()">Word replace [<span class="button_num" id="word_replace">0</span>]</button>
         </div>
 
         <div class="input">
